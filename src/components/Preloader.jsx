@@ -1,6 +1,8 @@
 function Preloader () {
 
     return (
+
+        <div className="flex-center">
             <div className="preloader-wrapper big active">
                 <div className="spinner-layer spinner-blue-only">
                     <div className="circle-clipper left">
@@ -12,6 +14,7 @@ function Preloader () {
                     </div>
                 </div>
             </div>
+        </div>
     )
 }
 

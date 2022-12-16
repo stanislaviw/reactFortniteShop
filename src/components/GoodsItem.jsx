@@ -1,24 +1,23 @@
 function GoodsItem (props) {
     const {
-        id,
-        name,
-        description,
+        mainId,
+        displayName,
+        rarity,
         price,
-        full_background,
+        displayAssets,
     } = props;
 
     return (
-        <div className="card" id={id}>
+        <div className="card" id={mainId}>
             <div className="card-image">
-                <img src={full_background} alt={name}/>
-                <span className="card-title">{name}</span>
+                <img src={displayAssets[0].full_background} alt={displayName}/>
             </div>
             <div className="card-content">
-                <p>{description}</p>
+                <p> Rarity: {rarity.id}</p>
             </div>
             <div className="card-action">
-                <button className="btn">Buy</button>
-                <span className="rigth">{price}</span>
+                <button className="btn">Buy now</button>
+                <span className="rigth">{price.finalPrice} XP</span>
             </div>
         </div>
     )

@@ -12,10 +12,7 @@ function GoodsList (props) {
 
     return (
         <div className='goods'>
-            {goods.map((item) =>  {
-                    <GoodsItem key={item.id} {...item} /> 
-                }
-            )}
+            {goods.map((item) =>  <GoodsItem key={item.mainId} {...item} />)}
         </div>
     )
 }  

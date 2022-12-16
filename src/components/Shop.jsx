@@ -10,24 +10,24 @@ function Shop () {
     const [loading, setLoading] = useState(true);
 
 
-    useEffect(function getGoods () {
+    useEffect(function getGoods() {
         fetch(API_URL, {
             headers: {
-                'Authorization': API_KEY,
+                Authorization: API_KEY,
             },
         })
-        .then(response => response.json())
-        .then(data => {
-            data.featured && setGoods(data.featured);
-            setLoading(false);
-        })
-
+            .then(response => response.json())
+            .then(data => {
+                console.log(data)
+                data.shop && setGoods(data.shop);
+                setLoading(false);
+            })
     }, [])
 
     return (
         <main className="container content">
             {
-                loading ? <Preloader /> : <GoodsList />
+                loading ? <Preloader /> : <GoodsList goods={goods} />
             }
         </main>
     )

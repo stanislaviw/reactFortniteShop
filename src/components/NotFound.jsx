@@ -2,8 +2,8 @@ function NotFound () {
 
     return (
         <div className="flex-center">
-            <div className="not-found">
-                <h3>Something went wrong, sorry...</h3>
+            <div>
+                <h3 className="not-found">Not Found</h3>
             </div>
         </div>
     )
