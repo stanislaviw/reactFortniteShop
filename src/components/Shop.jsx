@@ -2,12 +2,14 @@ import { useEffect, useState } from 'react';
 import {API_KEY, API_URL} from '../config';
 import {Preloader} from '../components/Preloader';
 import {GoodsList} from '../components/GoodsList';
+import {Cart} from './Cart'
 
 
 function Shop () {
 
     const [goods, setGoods] = useState([]);
     const [loading, setLoading] = useState(true);
+    const [order, setOrder] = useState([])
 
 
     useEffect(function getGoods() {
@@ -26,6 +28,7 @@ function Shop () {
 
     return (
         <main className="container content">
+            <Cart order={order.length}/>
             {
                 loading ? <Preloader /> : <GoodsList goods={goods} />
             }

@@ -43,6 +43,7 @@ nav {
 
 .btn, .btn:focus {
   background: #6a1b9a;
+  border-radius: 5px;
 }
 
 .card {
@@ -59,9 +60,47 @@ nav {
 .card-action {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .btn:hover {
   background: #4b126e;
   transition-duration: 0.4s
 } 
+
+.rarity {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.rarity-epic {
+  background-color: rgb(224, 89, 199);
+}
+
+.rarity-legendary {
+  background-color: rgb(252, 207, 74);
+}
+
+.rarity-uncommon {
+  background-color: rgb(67, 170, 79);
+}
+
+.rarity-rare {
+  background-color: rgb(44, 153, 226);
+}
+
+.rarity-common {
+  background-color: rgb(81, 66, 69);
+}
+
+.cart { 
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  cursor: pointer;
+  z-index: 5;
+  padding: 1rem 1rem 0.7rem 1rem;
+  border-radius: 5px;
+}
