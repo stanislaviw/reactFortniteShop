@@ -11,6 +11,33 @@ function Shop () {
     const [loading, setLoading] = useState(true);
     const [order, setOrder] = useState([])
 
+    const addToShoppingList = (item) =>  {
+        const indexItem = order.findIndex(el => el.mainId === item.mainId)
+
+        if(indexItem < 0) {
+            const cloneItem = {
+                ...item,
+                quantity: 1,
+            }
+            setOrder([...order, cloneItem])
+        } else {
+            const newOrder = order.map((orderItem, index) => {
+
+                if(index === indexItem) {
+                    return {
+                        ...orderItem,
+                        quantity: orderItem.quantity + 1
+                    }
+                } else {
+                    return orderItem
+                }
+                
+            })
+            setOrder(newOrder)
+        }
+
+    }   
+
 
     useEffect(function getGoods() {
         fetch(API_URL, {
@@ -20,7 +47,6 @@ function Shop () {
         })
             .then(response => response.json())
             .then(data => {
-                console.log(data)
                 data.shop && setGoods(data.shop);
                 setLoading(false);
             })
@@ -28,10 +54,10 @@ function Shop () {
 
     return (
         <main className="container content">
-            <Cart order={order.length}/>
             {
-                loading ? <Preloader /> : <GoodsList goods={goods} />
+                loading ? <Preloader /> : <GoodsList addToShoppingList={addToShoppingList} goods={goods} />
             }
+            <Cart quantity={order.length}/>
         </main>
     )
 }
