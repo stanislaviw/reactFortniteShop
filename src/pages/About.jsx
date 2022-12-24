@@ -1,7 +1,7 @@
 function About () {
 
     return (
-        <main className='about-container container'>
+        <main className='container'>
             <div className="about-container">
                 <h2>About</h2>
                 <div className="about-title">

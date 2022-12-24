@@ -111,3 +111,19 @@ nav {
   padding: 1rem 1rem 0.7rem 1rem;
   border-radius: 5px;
 }
+
+.basket-list {
+  border-radius: 5px;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  transform: translate(-50% -50%);
+  width: 25rem;
+  max-width: 90%;
+  z-index: 5;
+}
+
+.close-icone {
+  color: #4a148c;
+  cursor: pointer;
+}
