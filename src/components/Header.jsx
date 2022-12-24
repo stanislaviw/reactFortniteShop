@@ -1,3 +1,5 @@
+import {Link} from 'react-router-dom';
+
 function Header () {
     
     return (
@@ -5,9 +7,9 @@ function Header () {
             <div className="nav-wrapper">
                 <a href="#" className="brand-logo">Fortnite Shop</a>
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
-                    <li><a href="sass.html">Shop</a></li>
-                    <li><a href="badges.html">About</a></li>
-                    <li><a href="collapsible.html">Contacts</a></li>
+                    <li><Link to="/">Shop</Link></li>
+                    <li><Link to="/about">About</Link></li>
+                    <li><Link to="/contacts">Contacts</Link></li>
                 </ul>
             </div>
         </nav>

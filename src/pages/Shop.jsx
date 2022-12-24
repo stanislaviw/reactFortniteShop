@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import {API_KEY, API_URL} from '../config';
 import {Preloader} from '../components/Preloader';
 import {GoodsList} from '../components/GoodsList';
-import {Cart} from './Cart'
+import {Cart} from '../components/Cart'
 
 
 function Shop () {
