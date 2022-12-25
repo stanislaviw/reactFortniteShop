@@ -4,17 +4,20 @@ function BasketItem(props) {
         mainId,
         price,
         displayName,
-        quantity
+        quantity,
+        deleteFromShoppingList = Function.prototype
     } = props;
 
     return (
 
-        <li className="collection-item" id={mainId}>
+        <li className="collection-item">
 
             {displayName} x{quantity} = {price.finalPrice * quantity} VC
 
             <span className="secondary-content">
-                <i  className="material-icons close-icone">close</i>
+                <i onClick={ () => deleteFromShoppingList({
+                    mainId
+                })}  className="material-icons close-icone">close</i>
             </span>
         </li>
     )

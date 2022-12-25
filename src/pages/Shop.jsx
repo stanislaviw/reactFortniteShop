@@ -10,8 +10,8 @@ function Shop () {
 
     const [goods, setGoods] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [order, setOrder] = useState([])
-    const [basket, setBasket] = useState(false)
+    const [order, setOrder] = useState([]);
+    const [basket, setBasket] = useState(false);
 
     const addToShoppingList = (item) =>  {
         const indexItem = order.findIndex(el => el.mainId === item.mainId)
@@ -44,6 +44,23 @@ function Shop () {
         setBasket(!basket)
     }
 
+    const deleteFromShoppingList = (item) => {
+        
+        const deleteItem = order.findIndex(el => el.mainId === item.mainId);
+
+        if(order[deleteItem].quantity > 1) {
+            
+            return setOrder([])
+        }
+
+        order.splice(deleteItem, 1);
+
+        setOrder([...order]);
+
+        console.log(order)
+
+    }
+
 
     useEffect(function getGoods() {
         fetch(API_URL, {
@@ -68,7 +85,7 @@ function Shop () {
             }
 
             {
-                basket && <BasketList basketShow={basketShow} order={order}/>
+                basket && <BasketList basketShow={basketShow} deleteFromShoppingList={deleteFromShoppingList} order={order}/>
             }
 
         </main>
