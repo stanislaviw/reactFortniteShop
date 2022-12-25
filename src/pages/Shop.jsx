@@ -50,14 +50,14 @@ function Shop () {
 
         if(order[deleteItem].quantity > 1) {
             
-            return setOrder([])
+            order[deleteItem].quantity -= 1;
+
+            return setOrder([...order])
         }
 
         order.splice(deleteItem, 1);
 
-        setOrder([...order]);
-
-        console.log(order)
+        return setOrder([...order]);
 
     }
 
