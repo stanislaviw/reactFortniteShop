@@ -128,3 +128,39 @@ nav {
   color: #4a148c;
   cursor: pointer;
 }
+
+.about-title {
+  text-align: center;
+  background-color: #5a318c;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.contacts-container {
+  text-align: center;
+  height: 100%;
+  max-height: 1300px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts-link {
+  padding: 5px;
+  font-size: 1.5rem;
+  width: 100%;
+  border-radius: 5px;
+  border: 2px solid #5a318c;
+  margin-bottom: 10px;
+  color: #5a318c;
+}
+
+.contacts-link:hover {
+  -webkit-transform: scale(1.02);
+  -ms-transform: scale(1.02);
+  transform: scale(1.02);
+  box-shadow: 0px 0px 10px 2px rgba(106, 27, 154, 50%);
+}
