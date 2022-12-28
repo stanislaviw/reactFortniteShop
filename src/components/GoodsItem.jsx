@@ -21,7 +21,7 @@ function GoodsItem (props) {
 
             </div>
             <div className="card-action">
-                <button className="btn" onClick={() => addToShoppingList({
+                <button className="btn #6a1b9a darken-3" onClick={() => addToShoppingList({
                     mainId,
                     price,
                     displayName,

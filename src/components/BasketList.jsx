@@ -10,7 +10,7 @@ function BasketList(props) {
 
     return (
         <ul className="collection basket-list">
-            <li className="collection-item #4a148c purple darken-4 active">Basket
+            <li className="collection-item #6a1b9a purple darken-3 active">Basket
                 <span className="secondary-content">
                     <i className="material-icons close-icone white-text" onClick={basketShow}>close</i>
                 </span>
@@ -20,7 +20,7 @@ function BasketList(props) {
                     <BasketItem deleteFromShoppingList={deleteFromShoppingList} key={item.mainId} {...item}/>))
                     : <li class="collection-item">Basket is empty</li>
                 }
-            <li className="collection-item active #4a148c purple darken-4">Total Price = {totalPrice} VC</li>
+            <li className="collection-item active #6a1b9a purple darken-3">Total Price = {totalPrice} VC</li>
         </ul>
     )
 }

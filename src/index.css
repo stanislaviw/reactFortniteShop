@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #6e318c;
 }
 
 code {
@@ -35,15 +36,23 @@ nav {
 
 .not-found {
   font-size: 2.5vw;
-  color: #fff;
   padding: 15px;
   border-radius: 15px;
-  background-color: #6a1b9a;
+  color: #6e318c;
 }
 
-.btn, .btn:focus {
-  background: #6a1b9a;
+.btn {
   border-radius: 5px;
+  background-color: #6e318c;
+}
+
+.btn:hover {
+  background-color: #54226d;
+  transition-duration: 0.3s
+}
+
+.btn:focus {
+  background-color: #6e318c;
 }
 
 .card {
@@ -69,11 +78,6 @@ nav {
   justify-content: space-between;
   align-items: center;
 }
-
-.btn:hover {
-  background: #4b126e;
-  transition-duration: 0.4s
-} 
 
 .rarity {
   width: 100%;
@@ -110,6 +114,13 @@ nav {
   z-index: 5;
   padding: 1rem 1rem 0.7rem 1rem;
   border-radius: 5px;
+  border: 1px solid #fff;
+}
+
+.cart:hover {
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  transform: scale(1.03);
 }
 
 .basket-list {
@@ -125,27 +136,24 @@ nav {
 }
 
 .close-icone {
-  color: #4a148c;
+  color: #6e318c;;
   cursor: pointer;
 }
 
 .about-title {
   text-align: center;
-  background-color: #5a318c;
-  color: #fff;
   padding: 10px;
   border-radius: 5px;
 }
 
 .contacts-container {
   text-align: center;
-  height: 100%;
-  max-height: 1300px;
 }
 
 .links {
   display: flex;
   flex-direction: column;
+  margin-bottom: 30px;
 }
 
 .contacts-link {
@@ -163,4 +171,9 @@ nav {
   -ms-transform: scale(1.02);
   transform: scale(1.02);
   box-shadow: 0px 0px 10px 2px rgba(106, 27, 154, 50%);
+}
+
+.contacts-title {
+  color: #5a318c;
+  font-size: 2.5rem;
 }
