@@ -177,3 +177,32 @@ nav {
   color: #5a318c;
   font-size: 2.5rem;
 }
+
+.collection-item-style {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.collection-item-display-name {
+  width: 30%;
+}
+
+.collection-item-btn {
+  background-color: #5a318c;
+  color: #fff;
+  width: 25px;
+  height: 25px;
+  border: none;
+  border-radius: 5px;
+}
+
+
+.collection-item-btn:hover {
+  background-color: #47276d;
+  transition-duration: 0.3s
+}
+
+.collection-item-btn:focus {
+  background-color: #5a318c;
+}

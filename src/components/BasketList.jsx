@@ -2,7 +2,7 @@ import { BasketItem } from './BasketItem'
 
 function BasketList(props) {
 
-    const {order = [], basketShow = Function.prototype, deleteFromShoppingList = Function.prototype} = props;
+    const {order = [], basketShow = Function.prototype, deleteFromShoppingList = Function.prototype } = props;
 
     const totalPrice = order.reduce((sum, el) => {
         return sum + el.price.finalPrice * el.quantity;

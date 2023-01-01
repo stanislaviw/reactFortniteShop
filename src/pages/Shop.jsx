@@ -48,13 +48,6 @@ function Shop () {
         
         const deleteItem = order.findIndex(el => el.mainId === item.mainId);
 
-        if(order[deleteItem].quantity > 1) {
-
-            order[deleteItem].quantity -= 1;
-
-            return setOrder([...order])
-        }
-
         order.splice(deleteItem, 1);
 
         return setOrder([...order]);

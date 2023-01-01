@@ -10,9 +10,18 @@ function BasketItem(props) {
 
     return (
 
-        <li className="collection-item">
+        <li className="collection-item collection-item-style">
+            <span className="collection-item-display-name">
+                { displayName.length > 10 ? displayName.slice(0, 10) + "..." : displayName} 
+            </span>
+            
+            <button className="collection-item-btn">-</button>
+            <span>{quantity}</span>
+            <button className="collection-item-btn">+</button>
 
-            {displayName} x{quantity} = {price.finalPrice * quantity} VC
+            <span className="collection-item-display-name">
+                = {price.finalPrice * quantity} VC
+            </span>
 
             <span className="secondary-content">
                 <i onClick={ () => deleteFromShoppingList({
