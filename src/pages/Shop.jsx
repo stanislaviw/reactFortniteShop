@@ -54,6 +54,30 @@ function Shop () {
 
     }
 
+    const deleteOneBasketItem  = (item) => {
+        const findId = order.find(el => el.mainId === item.mainId)
+
+        if (findId.quantity > 1) {
+            findId.quantity -= 1;
+
+            return setOrder([...order])
+        }
+
+        return null
+    }
+
+    const addOneBasketItem  = (item) => {
+        const findId = order.find(el => el.mainId === item.mainId)
+
+        if (findId.quantity >= 1) {
+            findId.quantity += 1;
+
+            return setOrder([...order])
+        }
+
+        return null
+    }
+
 
     useEffect(function getGoods() {
         fetch(API_URL, {
@@ -78,7 +102,7 @@ function Shop () {
             }
 
             {
-                basket && <BasketList basketShow={basketShow} deleteFromShoppingList={deleteFromShoppingList} order={order}/>
+                basket && <BasketList deleteOneBasketItem={deleteOneBasketItem} addOneBasketItem={addOneBasketItem} basketShow={basketShow} deleteFromShoppingList={deleteFromShoppingList} order={order}/>
             }
 
         </main>

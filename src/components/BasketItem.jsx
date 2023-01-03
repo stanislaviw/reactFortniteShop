@@ -5,7 +5,9 @@ function BasketItem(props) {
         price,
         displayName,
         quantity,
-        deleteFromShoppingList = Function.prototype
+        deleteFromShoppingList = Function.prototype,
+        deleteOneBasketItem = Function.prototype,
+        addOneBasketItem = Function.prototype,
     } = props;
 
     return (
@@ -15,9 +17,9 @@ function BasketItem(props) {
                 { displayName.length > 10 ? displayName.slice(0, 10) + "..." : displayName} 
             </span>
             
-            <button className="collection-item-btn">-</button>
+            <button onClick={() => deleteOneBasketItem({mainId})} className="collection-item-btn">-</button>
             <span>{quantity}</span>
-            <button className="collection-item-btn">+</button>
+            <button onClick={() => addOneBasketItem({mainId})} className="collection-item-btn">+</button>
 
             <span className="collection-item-display-name">
                 = {price.finalPrice * quantity} VC
