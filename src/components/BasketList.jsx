@@ -23,9 +23,9 @@ function BasketList(props) {
                 {
                     order.length ? order.map(item => (
                 <BasketItem addOneBasketItem={addOneBasketItem} deleteFromShoppingList={deleteFromShoppingList} deleteOneBasketItem={deleteOneBasketItem} key={item.mainId} {...item}/>))
-                    : <li class="collection-item">Basket is empty</li>
+                    : <li class="collection-item">Basket is Empty</li>
                 }
-            <li className="collection-item active #6a1b9a purple darken-3">Total Price = {totalPrice} VC</li>
+            <li className="collection-item active #6a1b9a purple darken-3">Total Price = {totalPrice} VC <a href="#" className="secondary-content link-buy">Proceed to Buy</a></li>
         </ul>
     )
 }

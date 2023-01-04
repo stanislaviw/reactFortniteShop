@@ -3,7 +3,9 @@ import {API_KEY, API_URL} from '../config';
 import {Preloader} from '../components/Preloader';
 import {GoodsList} from '../components/GoodsList';
 import {Cart} from '../components/Cart';
-import { BasketList } from '../components/BasketList';
+import {BasketList} from '../components/BasketList';
+import {Alert} from '../components/Alert';
+
 
 
 function Shop () {
@@ -12,9 +14,11 @@ function Shop () {
     const [loading, setLoading] = useState(true);
     const [order, setOrder] = useState([]);
     const [basket, setBasket] = useState(false);
+    const [alertName, setAlertName] = useState('');
 
     const addToShoppingList = (item) =>  {
         const indexItem = order.findIndex(el => el.mainId === item.mainId)
+        setAlertName(item.displayName);
 
         if(indexItem < 0) {
             const cloneItem = {
@@ -39,6 +43,10 @@ function Shop () {
         }
 
     }   
+
+    const closeAlert = () => {
+        setAlertName('')
+    }
 
     const basketShow = () => {
         setBasket(!basket)
@@ -104,7 +112,9 @@ function Shop () {
             {
                 basket && <BasketList deleteOneBasketItem={deleteOneBasketItem} addOneBasketItem={addOneBasketItem} basketShow={basketShow} deleteFromShoppingList={deleteFromShoppingList} order={order}/>
             }
-
+            {
+                alertName && <Alert closeAlert={closeAlert} name={alertName} />
+            }
         </main>
     )
 }
