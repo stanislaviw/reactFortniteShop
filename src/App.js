@@ -11,8 +11,8 @@ function App() {
       <Routes>
         <Route path='/reactFortniteShop' element={<Layout />}>
           <Route index element={<Shop />}/>
-          <Route path='/about' element={<About />}/>
-          <Route path='/contacts' element={<Contacts />}/>
+          <Route path='/reactFortniteShop/about' element={<About />}/>
+          <Route path='/reactFortniteShop/contacts' element={<Contacts />}/>
           <Route path='*' element={<NotFound/>}/>
         </Route>
       </Routes>
