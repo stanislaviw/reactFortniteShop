@@ -7,7 +7,7 @@ function Header () {
             <div className="nav-wrapper">
                 <a href="https://stanislaviw.github.io/reactFortniteShop" className="brand-logo">Fortnite Shop</a>
                 <ul id="nav-mobile" className="right hide-on-med-and-down">
-                    <li><Link to="/reactFortniteShop">Shop</Link></li>
+                    <li><Link to="/">Shop</Link></li>
                     <li><Link to="/about">About</Link></li>
                     <li><Link to="/contacts">Contacts</Link></li>
                 </ul>

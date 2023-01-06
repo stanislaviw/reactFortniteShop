@@ -8,7 +8,7 @@ import { Layout } from './components/Layout';
 function App() {
   return (
     <>
-      <Routes basename='/reactFortniteShop'>
+      <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Shop />}/>
           <Route path='about' element={<About />}/>
