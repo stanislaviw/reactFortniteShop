@@ -243,3 +243,23 @@ nav {
     transform: translateY(0rem);
   }
 }
+
+.footer-links-item {
+  color: rgba(255,255,255,0.8);
+}
+
+
+.footer-links {
+  transform: translateX(-100%);
+  height: 0px;
+}
+
+@media (max-width: 991px) {
+  .footer-links {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 15px;
+    transform: translateX(0);
+    height: auto;
+  }
+}
