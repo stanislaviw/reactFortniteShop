@@ -197,6 +197,7 @@ nav {
 }
 
 .collection-item-btn {
+  text-align: center;
   background-color: #5a318c;
   color: #fff;
   width: 25px;
