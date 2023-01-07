@@ -7,7 +7,7 @@ import { Layout } from './components/Layout';
 
 function App() {
   return (
-    <>
+    <div className="wrapper">
       <Routes>
         <Route path='/' element={<Layout />}>
           <Route index element={<Shop />}/>
@@ -16,7 +16,7 @@ function App() {
           <Route path='*' element={<NotFound/>}/>
         </Route>
       </Routes>
-    </>
+    </div>
   );
 }
 

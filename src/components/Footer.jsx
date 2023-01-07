@@ -11,7 +11,7 @@ function Footer () {
                 <Link className="footer-links-item" to="/contacts">Contacts</Link>
               </div>
               <span>© {new Date().getFullYear()} Stanislav Ivanov</span>
-              <a className="grey-text text-lighten-4 right" href="https://github.com/stanislaviw/reactFortniteShop">Repositorie</a>
+              <a className="footer-links-item right" target="_blank" href="https://github.com/stanislaviw/reactFortniteShop">Repositorie</a>
             </div>
           </div>
         </footer>
